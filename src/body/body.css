@@ -1,0 +1,115 @@
+.stock-basics-wrapper {
+    display: flex;
+    width: 700px;
+    height: 200px;
+    padding: 24px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0 4px 24px 0 rgba(20, 10, 48, 0.08);
+}
+
+.stock-basics-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.stock-basics-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: stretch;
+}
+
+.stock-name-wrapper {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: flex-start;*/
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: auto;
+    height: 64px;
+}
+
+
+.stock-full-name {
+    color: #222;
+    font-family: "Helvetica Neue", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.stock-ticker {
+    color: #A7A7A7;
+    font-family: "Helvetica Neue", serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.price-of-stock-text {
+    align-self: stretch;
+
+    color: #A7A7A7;
+    font-family: "Helvetica Neue", serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.price-of-stock-number {
+    color: #222;
+    font-family: "Helvetica Neue", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+button {
+    display: flex;
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 8px;
+    background: #300EFF;
+
+    color: #FFF;
+    font-family: "Helvetica Neue", serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.grey-circle-behind {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100px;
+    background: #EAEAEA;
+}
+
+.stock-image {
+    width: 52.255px;
+    height: 52.255px;
+    flex-shrink: 0;
+}
