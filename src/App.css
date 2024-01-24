@@ -1,0 +1,9 @@
+.basics-chart-description {
+    display: flex;
+    flex-direction: column;
+
+    /*display: inline-flex;*/
+    align-items: flex-start;
+    gap: 24px;
+    padding: 92px 190px 92px 134px;
+}
