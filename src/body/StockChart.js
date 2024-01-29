@@ -8,7 +8,6 @@ export default function StockChart({stock}) {
 
     let today = new Date();
     let thirtyDaysAgo = new Date();
-
     thirtyDaysAgo.setDate(today.getDate() - 30);
 
     let todayString = today.toISOString().split('T')[0];
@@ -44,7 +43,7 @@ export default function StockChart({stock}) {
                     <div className="chart-options-piece">M15</div>
                     <div className="chart-options-piece">M30</div>
                     <div className="chart-options-piece">H1</div>
-                    <div className="chart-options-piece">D</div>
+                    <div className="chart-options-piece selected">D</div>
                     <div className="chart-options-piece">W</div>
                     <div className="chart-options-piece">Mo</div>
                 </div>

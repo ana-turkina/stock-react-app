@@ -43,9 +43,10 @@ export default function StockBasics({stock}) {
                     <div className="grey-circle-behind">
                         <img className="stock-image" src={stockImage[stock]} alt="stock icon"/>
                     </div>
-                    <div className="stock-full-name">{stockFullName[stock]}</div>
-                    <div className="stock-ticker">{stock} </div>
-
+                    <div>
+                        <div className="stock-full-name">{stockFullName[stock]}</div>
+                        <div className="stock-ticker">{stock}</div>
+                    </div>
                 </div>
                 <div>
                     <div className="price-of-stock-text">Price of {stockFullName[stock]}</div>

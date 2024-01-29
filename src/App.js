@@ -4,19 +4,27 @@ import StockBasics from "./body/StockBasics";
 import StockChart from "./body/StockChart";
 import StockDescription from "./body/StockDescription";
 import './App.css'
+import NoStockSelected from "./body/NoStockSelected";
 
 
 function App() {
     const [stock, setStock] = useState('');
     return (
-        <div>
-            <HeaderContents stock={stock} setStock={setStock} />
+        <>
+            <HeaderContents stock={stock} setStock={setStock}/>
             <div className="basics-chart-description">
-            <StockBasics stock={stock} />
-            <StockChart stock={stock} />
-            <StockDescription stock={stock} />
+                {
+                    stock ? <>
+
+                            <StockBasics stock={stock}/>
+                            <StockChart stock={stock}/>
+                            <StockDescription stock={stock}/>
+
+                        </> :
+                        <NoStockSelected/>
+                }
             </div>
-        </div>
+        </>
     );
 }
 
