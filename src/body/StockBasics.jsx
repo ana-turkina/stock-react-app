@@ -5,6 +5,7 @@ import microsoft from './stock-images/microsoft.png'
 import apple from './stock-images/apple.png'
 import google from './stock-images/google.png'
 import amazon from './stock-images/amazon.png'
+import { getStockInformationClosePrice} from "../utils/apiCalls";
 
 
 const stockFullName = {
@@ -26,14 +27,7 @@ export default function StockBasics({stock}) {
 
     useEffect(() => {
         if (stock) {
-            const requestOptions = {
-                method: 'GET',
-                redirect: 'follow',
-            };
-            fetch(`https://api.polygon.io/v2/aggs/ticker/${stock}/range/1/day/2023-01-09/2023-01-09?apiKey=wU96Rp6clvICXRNdniivAJhr3vZNVGQn`, requestOptions)
-                .then(response => response.json())
-                .then(result => setClosePrice(result.results[0].c))
-                .catch(error => console.log('error', error));
+            getStockInformationClosePrice(stock, setClosePrice)
         }
     }, [stock]);
     return (

@@ -9,18 +9,18 @@ import NoStockSelected from "./body/NoStockSelected";
 
 function App() {
     const [stock, setStock] = useState('');
+    const SelectedtStockView = <>
+        <StockBasics stock={stock}/>
+        <StockChart stock={stock}/>
+        <StockDescription stock={stock}/>
+    </>
+
     return (
         <>
             <HeaderContents stock={stock} setStock={setStock}/>
             <div className="basics-chart-description">
                 {
-                    stock ? <>
-
-                            <StockBasics stock={stock}/>
-                            <StockChart stock={stock}/>
-                            <StockDescription stock={stock}/>
-
-                        </> :
+                    stock ? SelectedtStockView :
                         <NoStockSelected/>
                 }
             </div>
