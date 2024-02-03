@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Chart as ChartJs} from 'chart.js/auto';
 import {Line} from 'react-chartjs-2';
 import './body.css'
-import {polygonKey} from "../../keys";
+import {polygonKey} from "../../private/keys";
 
 export default function StockChart({stock}) {
     const [chartData, setChartData] = useState(null);
