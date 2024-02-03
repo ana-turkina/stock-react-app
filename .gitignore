@@ -24,4 +24,4 @@ yarn-error.log*
 
 # keys
 
-*.keys.js
+.keys.js
