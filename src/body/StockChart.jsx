@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Chart as ChartJs} from 'chart.js/auto';
 import {Line} from 'react-chartjs-2';
 import './body.css'
+import {polygonKey} from "../../keys";
 
 export default function StockChart({stock}) {
     const [chartData, setChartData] = useState(null);
@@ -20,7 +21,7 @@ export default function StockChart({stock}) {
                 redirect: 'follow',
             };
 
-            fetch(`https://api.polygon.io/v2/aggs/ticker/${stock}/range/1/day/${thirtyDaysAgoString}/${todayString}?apiKey=wU96Rp6clvICXRNdniivAJhr3vZNVGQn`, requestOptions)
+            fetch(`https://api.polygon.io/v2/aggs/ticker/${stock}/range/1/day/${thirtyDaysAgoString}/${todayString}?apiKey=${polygonKey}`, requestOptions)
                 .then(response => response.json())
                 .then(result => {
                     console.log(result);
